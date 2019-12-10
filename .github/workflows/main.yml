@@ -1,19 +1,19 @@
-name: Post new release
-
 on:
   release:
     types: [published]
 
 jobs:
-  set-up:
 
+  notify:
     runs-on: ubuntu-latest
-
+    name: Workflow to test the action
     steps:
-    - uses: actions/checkout@v1
-    - uses: ./
-    - with:
-        forum: 5
-        thread: 923433
-        client: "Mouseclick1#0000"
-        password: ${{ secrets.FORUM_PASSWORD }}
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Post notification
+        uses: ./
+        with:
+          forum: 5
+          thread: 923433
+          client: "Mouseclick1#0000"
+          password: ${{ secrets.FORUM_PASSWORD }}
