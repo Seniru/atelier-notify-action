@@ -5,7 +5,7 @@ local client = api()
 local enums = client.enumerations()
 
 coroutine.wrap(function()
-    client.connect(args[3], args[4])
+    client.connect(args[4], args[5])
 
     if client.isConnected() then
         print('Successfully logged in as ' .. args[3])
@@ -26,8 +26,8 @@ coroutine.wrap(function()
 
         --TODO: Replace the merry christmas with the message
         client.answerTopic("Merry Christmas", {
-            f = tonumber(args[2]),
-            t = tonumber(args[3])
+            f = 5,--tonumber(args[2]),
+            t = 923433--tonumber(args[3])
         })
 
         print('Answered successfully!')
