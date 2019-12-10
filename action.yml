@@ -1,0 +1,30 @@
+name: "atelier801-notifier"
+author: "Seniru"
+description: "An action to notify in atelier801 forum when there is a new release for a tfm related product."
+
+inputs:
+
+  forum:
+    description: "This ID of the forum"
+    required: true
+  
+  thread:
+    description: "The ID of the thread"
+    required: true
+
+  client:
+    description: "A valid transformice player to use to post the notification"
+    required: true
+
+  password:
+    description: "The password of the transformice player used as the client. Recommended to pass as an environment variable"
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - "${{ inputs.forum }}"
+    - "${{ inputs.thread }}"
+    - "${{ inputs.client }}"
+    - "${{ inputs.password }}"
