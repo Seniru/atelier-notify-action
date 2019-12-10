@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM cyr1l/alpine-luvit:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
