@@ -1,0 +1,19 @@
+name: Post new release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  set-up:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./
+    - with:
+        forum: 5
+        thread: 923433
+        client: "Mouseclick1#0000"
+        password: ${{ secrets.FORUM_PASSWORD }}
