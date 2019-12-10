@@ -1,8 +1,8 @@
 name: Test action
 
-on:
-  release:
-    types: [published]
+on: push
+#  release:
+ #   types: [published]
 
 jobs:
 
