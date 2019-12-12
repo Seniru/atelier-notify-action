@@ -35,4 +35,4 @@ coroutine.wrap(function()
     end
 
     client.disconnect()
-end)
+end)()
