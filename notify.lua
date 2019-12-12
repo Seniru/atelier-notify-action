@@ -9,6 +9,10 @@ local thread = args[3]
 local name = args[4]
 local password = args[5]
 
+print(forum)
+print(thread)
+print(name)
+
 coroutine.wrap(function()
 
     client.connect(name, password)
@@ -41,4 +45,4 @@ coroutine.wrap(function()
     end
 
     client.disconnect()
-end)()
+end)
