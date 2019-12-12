@@ -4,8 +4,8 @@ local json = require('json')
 local client = api()
 local enums = client.enumerations()
 
-local forum = args[2]
-local thread = args[3]
+local forum = tonumber(args[2])
+local thread = tonumber(args[3])
 local name = args[4]
 local password = args[5]
 
@@ -26,8 +26,8 @@ coroutine.wrap(function()
         
         --TODO: Replace the merry christmas with the message
         client.answerTopic("Merry Christmas", {
-            f = tonumber(forum),
-            t = tonumber(thread)
+            f = 5,
+            t = 902724
         })
 
         print('Answered successfully!')
