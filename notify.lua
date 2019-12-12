@@ -26,8 +26,8 @@ coroutine.wrap(function()
         
         --TODO: Replace the merry christmas with the message
         client.answerTopic("Merry Christmas", {
-            f = forum,
-            t = thread
+            f = tonumber(forum),
+            t = tonumber(thread)
         })
 
         print('Answered successfully!')
