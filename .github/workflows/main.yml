@@ -16,6 +16,6 @@ jobs:
         uses: ./
         with:
           forum: 5
-          thread: 902724
+          thread: 883358
           client: "Mouseclick1#0000"
           password: ${{ secrets.FORUM_PASSWORD }}
