@@ -1,6 +1,5 @@
 local http = require('coro-http')
 local json = require('json')
-local enums = client.enumerations()
 
 local forum = tonumber(args[2])
 local thread = tonumber(args[3])
@@ -11,6 +10,7 @@ coroutine.wrap(function()
     
     local api = require("fromage")
     local client = api()
+    local enums = client.enumerations()
 
     print('Attempting to log in as ' .. name .. '...')
     client.connect(name, password)
