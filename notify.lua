@@ -9,18 +9,15 @@ local thread = tonumber(args[3])
 local name = args[4]
 local password = args[5]
 
-print(forum)
-print(thread)
-print(name)
-
 coroutine.wrap(function()
-
+    
+    print('Attempting to log in as ' .. name .. '...')
     client.connect(name, password)
 
     if client.isConnected() then
         print('Successfully logged in as ' .. name)
 
-        print('Answering topic')
+        print('Answering topic (forum: ' .. tostring(forum) .. ', thread: ' .. tostring(thread) .. '...')
 
         --local head, body = http.request('GET', 'https://api.github.com/repos/Seniru/Timers4TFM/releases/latest', {{ "user-agent", 'Seniru' }})
         
