@@ -17,7 +17,7 @@ coroutine.wrap(function()
     if client.isConnected() then
         print('Successfully logged in as ' .. name)
 
-        print('Answering topic (forum: ' .. tostring(forum) .. ', thread: ' .. tostring(thread) .. '...')
+        print('Answering topic (forum: ' .. tostring(forum) .. ', thread: ' .. tostring(thread) .. ') ...')
 
         --local head, body = http.request('GET', 'https://api.github.com/repos/Seniru/Timers4TFM/releases/latest', {{ "user-agent", 'Seniru' }})
         
