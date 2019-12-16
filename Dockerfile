@@ -1,4 +1,4 @@
-FROM cyr1l/alpine-luvit:latest
+FROM ubunutu:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
