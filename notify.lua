@@ -7,7 +7,7 @@ local name = args[4]
 local password = args[5]
 
 coroutine.wrap(function()
-    
+
     local api = require("fromage")
     local client = api()
     local enums = client.enumerations()
@@ -21,7 +21,7 @@ coroutine.wrap(function()
         print('Answering topic (forum: ' .. tostring(forum) .. ', thread: ' .. tostring(thread) .. ') ...')
 
         --local head, body = http.request('GET', 'https://api.github.com/repos/Seniru/Timers4TFM/releases/latest', {{ "user-agent", 'Seniru' }})
-        
+
         --TODO: Replace the merry christmas with the message
         client.answerTopic("Merry Christmas", {
             f = forum,
